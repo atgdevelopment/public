@@ -228,7 +228,7 @@ r = redis.Redis(
 async def fetch_nasdaq_tickers():
     client = motor.motor_asyncio.AsyncIOMotorClient("mongodb://127.0.0.1:27017")
     db = client["trading_data"]
-    collection = db["ibkr_nasdaq_tickers"]
+    collection = db["nasdaq_tickers"]
 
     symbols = []
     async for doc in collection.find({}, {"_id": 0, "symbol": 1}):
