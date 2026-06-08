@@ -55,7 +55,7 @@ class DirectMassiveStreamConfig:
 
     mongo_uri: str = os.getenv("MONGO_URI", "mongodb://192.168.1.126:27017")
     mongo_database: str = os.getenv("MONGO_DATABASE", "trading_data")
-    mongo_ticker_collection: str = os.getenv("MONGO_TICKER_COLLECTION", "ibkr_nasdaq_tickers")
+    mongo_ticker_collection: str = os.getenv("MONGO_TICKER_COLLECTION", "nasdaq_tickers")
 
     subscribe_aggs: bool = _env_bool("SUBSCRIBE_AGGS", True)
     subscribe_trades: bool = _env_bool("SUBSCRIBE_TRADES", True)
